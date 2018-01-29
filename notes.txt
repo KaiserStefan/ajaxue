@@ -1,0 +1,4 @@
+composer require "novak/flagpackage"
+composer require typo3fluid/fluid
+composer require components/flag-icon-css
+composer install

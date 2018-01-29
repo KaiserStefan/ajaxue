@@ -1,0 +1,23 @@
+{
+    "name": "stefan/wettbewerb",
+    "description": "wettbewerb",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Stefan Kaiser",
+            "email": "stefan.kaiser@htl.rennweg.at"
+        }
+    ],
+    "require": {
+        "novak/flagpackage": "^1.1",
+        "typo3fluid/fluid": "^2.4",
+        "components/flag-icon-css": "^2.9"
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SabrinaNovak/Flags"
+        }
+    ]
+}
