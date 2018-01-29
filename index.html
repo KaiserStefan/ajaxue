@@ -5,18 +5,28 @@
 		<meta charset="UTF-8">
 		<title>Flag-Store</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="vendor/components/flag-icon-css/css/flag-icon.min.css">
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 
 	<div class="container">
 		<div style="display: flex; flex-direction:column; justify-content: space-between;">
-			<div id="jumbo1" class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+			<div id="jumbo0" class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+				<h2 id="name0"></h2>
+				<h3 id="price0"></h3>
+				<h3 id="width0"></h3>
+				<h3 id="height0"></h3>
+				<h3 id="color0"></h3>
+				<span id="span0"></span>
+			</div>
+			<div id="jumbo1"  class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
 				<h2 id="name1"></h2>
 				<h3 id="price1"></h3>
 				<h3 id="width1"></h3>
 				<h3 id="height1"></h3>
 				<h3 id="color1"></h3>
+				<span id="span1"></span>
 			</div>
 			<div id="jumbo2"  class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
 				<h2 id="name2"></h2>
@@ -24,13 +34,7 @@
 				<h3 id="width2"></h3>
 				<h3 id="height2"></h3>
 				<h3 id="color2"></h3>
-			</div>
-			<div id="jumbo3"  class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-				<h2 id="name3"></h2>
-				<h3 id="price3"></h3>
-				<h3 id="width3"></h3>
-				<h3 id="height3"></h3>
-				<h3 id="color3"></h3>
+				<span id="span2"></span>
 			</div>
 		</div>
 	</div>
@@ -49,12 +53,13 @@
 						response.json().then(function(data) {
 							console.log(data);
 							for (i = 0; i < 3; i++) {
-                                document.getElementById("name"+(i+1)).appendChild(document.createTextNode(data[i].name));
-                                document.getElementById("price"+(i+1)).appendChild(document.createTextNode(data[i].price));
-                                document.getElementById("width"+(i+1)).appendChild(document.createTextNode(data[i].width));
-                                document.getElementById("height"+(i+1)).appendChild(document.createTextNode(data[i].height));
-                                document.getElementById("color"+(i+1)).appendChild(document.createTextNode(data[i].color));
-                                document.getElementById("jumbo"+(i+1)).setAttribute("style", "background-color: "+(data[i].color)+";");
+                                document.getElementById("name"+i).appendChild(document.createTextNode(data[i].name));
+                                document.getElementById("price"+i).appendChild(document.createTextNode(data[i].price));
+                                document.getElementById("width"+i).appendChild(document.createTextNode(data[i].width));
+                                document.getElementById("height"+i).appendChild(document.createTextNode(data[i].height));
+                                document.getElementById("color"+i).appendChild(document.createTextNode(data[i].color));
+                                document.getElementById("jumbo"+i).setAttribute("style", "background-color: "+(data[i].color)+";");
+                                document.getElementById("span"+i).setAttribute("class", "flag-icon flag-icon-"+(data[i].lc));
 							}
 						});
 					}

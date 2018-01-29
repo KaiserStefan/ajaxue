@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Flag-Store</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./vendor/components/flag-icon-css/css/flag-icon.min.css">
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -15,6 +16,7 @@
             <h3>{flag1.width}</h3>
             <h3>{flag1.height}</h3>
             <h3>{flag1.color}</h3>
+            <span class="flag-icon flag-icon-{flag1.lc}"></span>
         </div>
         <div class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between;flex: 1;background-color: {flag2.color};">
             <h2>{flag2.name}</h2>
@@ -22,6 +24,7 @@
             <h3>{flag2.width}</h3>
             <h3>{flag2.height}</h3>
             <h3>{flag2.color}</h3>
+            <span class="flag-icon flag-icon-{flag2.lc}"></span>
         </div>
         <div class="jumbotron" style="display: flex; flex-direction: column; justify-content: space-between; flex:1 ;background-color: {flag3.color};">
             <h2>{flag3.name}</h2>
@@ -29,6 +32,7 @@
             <h3>{flag3.width}</h3>
             <h3>{flag3.height}</h3>
             <h3>{flag3.color}</h3>
+            <span class="flag-icon flag-icon-{flag3.lc}"></span>
         </div>
     </div>
 </div>
